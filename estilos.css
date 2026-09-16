@@ -1301,7 +1301,7 @@ fieldset legend {
 }
 
 
-/* Actividad Áulica 13 - comportamiento con JavaScript */
+/* Actividad Áulica 13 - subtotales dinámicos de la Parte B */
 .order-line {
   grid-template-columns: minmax(220px, 1fr) 80px minmax(145px, auto) minmax(175px, auto);
 }
@@ -1316,42 +1316,6 @@ fieldset legend {
   color: var(--text-primary);
 }
 
-.algorithm-card {
-  max-width: 720px;
-  margin: 48px auto;
-  padding: 32px;
-  background: var(--gradient-card);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-float);
-}
-
-.algorithm-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 24px 0;
-}
-
-.result-box {
-  margin-top: 24px;
-  padding: 18px;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  background: var(--surface-2);
-}
-
-#resultado {
-  display: inline-block;
-  margin-left: 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 600;
-}
-
-#resultado.positivo { color: #63e6a5; }
-#resultado.cero { color: var(--accent-cyan); }
-#resultado.negativo { color: #ff7b91; }
-
 @media (max-width: 860px) {
   .order-line {
     grid-template-columns: 1fr 76px;
@@ -1360,15 +1324,5 @@ fieldset legend {
   .item-price,
   .item-subtotal {
     text-align: left;
-  }
-}
-
-@media (max-width: 520px) {
-  .algorithm-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .algorithm-card {
-    padding: 22px;
   }
 }
