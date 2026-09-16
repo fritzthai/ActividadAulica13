@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Tech — Comprar</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado: barra de utilidad, marca, buscador y navegacion (igual en las 6 paginas) -->
+  <header class="site-header">
+    <div class="utility-bar">
+      <div class="utility-bar-inner">
+        <span>Envíos a todo el país</span>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="header-main-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">N</span>
+          NOVA <span class="accent">TECH</span>
+        </a>
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar auriculares, teclados, cargadores...">
+        </div>
+        <div class="header-actions">
+          <a href="login.html" class="header-action">👤 Iniciar sesión</a>
+          <a href="comprar.html" class="header-action cart">🛒 Carrito</a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="index.html">Inicio</a>
+        <div class="nav-item">
+          <a href="listado_box.html">Catálogo ▾</a>
+          <div class="dropdown-menu">
+            <a href="listado_box.html">Vista en tarjetas</a>
+            <a href="listado_tabla.html">Vista en tabla</a>
+          </div>
+        </div>
+        <a href="producto.html">Producto destacado</a>
+        <a href="comprar.html" class="active">Comprar</a>
+        <a href="algoritmica.html">Actividad JS</a>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Checkout</span>
+        <h1>Finalizar compra</h1>
+      </div>
+    </div>
+
+    <!-- Formulario de compra: datos del cliente + productos a la izquierda, resumen a la derecha -->
+    <section aria-label="Formulario de compra">
+    <div class="checkout-layout">
+
+      <form class="form-shell">
+
+        <fieldset>
+          <legend>Datos del cliente</legend>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nombre">Nombre del cliente</label>
+              <input type="text" id="nombre" name="nombre_cliente" value="Cliente de prueba">
+            </div>
+
+            <div class="form-field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" value="" placeholder="Ingresá tu teléfono">
+            </div>
+
+            <div class="form-field full">
+              <label for="direccion">Dirección</label>
+              <input type="text" id="direccion" name="direccion" value="" placeholder="Ingresá tu dirección">
+            </div>
+
+            <div class="form-field full">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" value="" placeholder="nombre@ejemplo.com">
+            </div>
+
+            <div class="form-field full">
+              <label for="medio_pago">Medio de pago</label>
+              <select id="medio_pago" name="medio_pago">
+                <option value="">Seleccioná un medio de pago</option>
+                <option value="tarjeta_credito" selected>Tarjeta de crédito</option>
+                <option value="tarjeta_debito">Tarjeta de débito</option>
+                <option value="transferencia">Transferencia bancaria</option>
+                <option value="mercado_pago">Mercado Pago</option>
+                <option value="efectivo">Efectivo contra entrega</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="form-note">
+            Estos datos vienen precargados como ejemplo (simulan que ya iniciaste sesión). Podés editarlos antes de confirmar.
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Productos seleccionados</legend>
+
+          <div class="order-line">
+            <span class="item-name">Auriculares Bluetooth NovaSound X1</span>
+            <input type="number" min="0" value="1" class="cantidad-producto" data-precio="45999" aria-label="Cantidad NovaSound X1" name="cantidad_novasound_x1">
+            <span class="item-price mono">Precio: $ 45.999</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 45.999</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Cargador Rápido GaN NovaCharge 65W</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="18500" aria-label="Cantidad NovaCharge 65W" name="cantidad_novacharge_65w">
+            <span class="item-price mono">Precio: $ 18.500</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 18.500</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Teclado Mecánico NovaKey RGB</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="52000" aria-label="Cantidad NovaKey RGB" name="cantidad_novakey_rgb">
+            <span class="item-price mono">Precio: $ 52.000</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 52.000</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Mouse Inalámbrico NovaClick Pro</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="22300" aria-label="Cantidad NovaClick Pro" name="cantidad_novaclick_pro">
+            <span class="item-price mono">Precio: $ 22.300</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 22.300</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Parlante Portátil NovaBoom Mini</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="31200" aria-label="Cantidad NovaBoom Mini" name="cantidad_novaboom_mini">
+            <span class="item-price mono">Precio: $ 31.200</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 31.200</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Power Bank NovaCharge 20000mAh</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="27800" aria-label="Cantidad NovaCharge 20000mAh" name="cantidad_novacharge_20k">
+            <span class="item-price mono">Precio: $ 27.800</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 27.800</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Auriculares In-Ear NovaBuds Air</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="28900" aria-label="Cantidad NovaBuds Air" name="cantidad_novabuds_air">
+            <span class="item-price mono">Precio: $ 28.900</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 28.900</strong></span>
+          </div>
+
+          <div class="order-line">
+            <span class="item-name">Hub USB-C NovaHub 7-en-1</span>
+            <input type="number" min="0" value="0" class="cantidad-producto" data-precio="19900" aria-label="Cantidad NovaHub 7-en-1" name="cantidad_novahub_7">
+            <span class="item-price mono">Precio: $ 19.900</span>
+            <span class="item-subtotal mono">Subtotal: <strong>$ 19.900</strong></span>
+          </div>
+
+          <p class="form-note">Ajustá la cantidad de cada producto que querés incluir en tu pedido.</p>
+        </fieldset>
+
+      </form>
+
+      <aside class="order-summary">
+        <span class="eyebrow">Tu pedido</span>
+        <h2>Resumen</h2>
+
+        <div class="recap-row">
+          <span>Productos pedidos</span>
+          <span id="productos-pedidos">1</span>
+        </div>
+        <div class="recap-row">
+          <span>Unidades totales</span>
+          <span id="unidades-totales">1</span>
+        </div>
+
+        <div class="order-total">
+          <span class="label">Total estimado</span>
+          <span class="value" id="total-estimado">$ 45.999</span>
+        </div>
+
+        <a href="#confirmar-pedido" class="btn btn-primary btn-block" style="margin-top:20px;">Finalizar pedido</a>
+        <p class="form-note" style="text-align:center; margin-top:10px;">
+          El resumen se actualiza automáticamente al cambiar las cantidades.
+        </p>
+      </aside>
+
+    </div>
+    </section>
+
+    <!-- Confirmacion de compra en dos pasos, sin JavaScript: ver estilos.css (.modal-overlay:target) -->
+    <div class="modal-overlay" id="confirmar-pedido">
+    <div class="modal-card">
+      <span class="badge">Resumen de facturación</span>
+      <h2>Confirmá tu pedido</h2>
+
+      <table class="modal-summary">
+        <tbody>
+          <tr>
+            <td>Auriculares Bluetooth NovaSound X1</td>
+            <td class="qty">x1</td>
+            <td class="amount">$ 45.999</td>
+          </tr>
+          <tr>
+            <td>Envío estándar</td>
+            <td class="qty">—</td>
+            <td class="amount">$ 0</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2">Total a pagar</td>
+            <td class="amount">$ 45.999</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="form-note">
+        Este resumen se genera con JavaScript a partir de las cantidades seleccionadas.
+      </p>
+
+      <div class="modal-actions">
+        <a href="#" class="btn btn-outline">Cancelar</a>
+        <a href="#pedido-confirmado" class="btn btn-primary">Confirmar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="pedido-confirmado">
+    <div class="modal-card">
+      <span class="badge">Pedido confirmado</span>
+      <h2>¡Gracias por tu compra!</h2>
+      <p>Guardá o imprimí tu comprobante. También podés escribirnos por WhatsApp si tenés alguna consulta.</p>
+
+      <div class="ticket">
+        <div class="ticket-header">
+          <span class="brand-mark">N</span>
+          <div><strong>NOVA TECH</strong></div>
+          <div class="ticket-meta">Comprobante N.° 0001045</div>
+          <div class="ticket-meta">Fecha: 04/09/2026</div>
+        </div>
+
+        <p class="ticket-meta">Cliente: Cliente de prueba</p>
+        <p class="ticket-meta">Medio de pago: Tarjeta de crédito</p>
+
+        <table class="modal-summary">
+          <tbody>
+            <tr>
+              <td>Auriculares Bluetooth NovaSound X1</td>
+              <td class="qty">x1</td>
+              <td class="amount">$ 45.999</td>
+            </tr>
+            <tr>
+              <td>Envío estándar</td>
+              <td class="qty">—</td>
+              <td class="amount">$ 0</td>
+            </tr>
+            <tr class="total">
+              <td colspan="2">Total pagado</td>
+              <td class="amount">$ 45.999</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rating-block">
+        <p class="form-note">Antes de cerrar, ¿cómo calificarías tu experiencia en Nova Tech?</p>
+        <div class="rating-group">
+          <input type="radio" id="val1" name="valoracion" value="1">
+          <label for="val1">1</label>
+          <input type="radio" id="val2" name="valoracion" value="2">
+          <label for="val2">2</label>
+          <input type="radio" id="val3" name="valoracion" value="3" checked>
+          <label for="val3">3</label>
+          <input type="radio" id="val4" name="valoracion" value="4">
+          <label for="val4">4</label>
+          <input type="radio" id="val5" name="valoracion" value="5">
+          <label for="val5">5</label>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+                <button type="button" class="btn btn-outline" onclick="window.print()">🖨️ Imprimir ticket</button>
+        <a href="#" class="btn btn-primary">💬 Contactar tienda</a>
+      </div>
+
+      <p class="login-footer-note close-hint"><a href="#">Cerrar</a></p>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- Pie de pagina -->
+  <footer class="site-footer">
+    <span class="accent">NOVA TECH</span> · Accesorios tecnológicos para tu día a día
+  </footer>
+
+  <script src="comprar.js"></script>
+</body>
+</html>
