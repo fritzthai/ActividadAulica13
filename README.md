@@ -1,24 +1,31 @@
 # Actividad Áulica 13 — JavaScript Vanilla
 
-Proyecto realizado a partir del maquetado de **Nova Tech**.
+La entrega contiene dos partes independientes dentro del mismo repositorio.
 
 ## Parte A: Algorítmica
 
-En `algoritmica.html` se ingresan dos números, se calcula su suma y se informa si el resultado es positivo, cero o negativo. La respuesta se inserta en `<span id="resultado">` sin recargar la página.
+Archivos:
 
-## Parte B: Aplicación práctica
+- `algoritmica.html`
+- `algoritmica.css`
+- `algoritmica.js`
 
-En `comprar.html`, cada cambio en la cantidad de un producto recalcula en tiempo real:
+Este ejercicio permite ingresar dos números, calcular su suma y mostrar si el resultado es positivo, cero o negativo. La respuesta se inserta en `<span id="resultado">` sin recargar la página.
 
-- El subtotal del producto.
+## Parte B: Aplicación práctica en Nova Tech
+
+Archivos principales:
+
+- `comprar.html`
+- `comprar.js`
+- `estilos.css`
+
+Al modificar la cantidad de cualquier producto se actualizan en tiempo real:
+
+- El subtotal de cada producto.
 - La cantidad de productos distintos.
 - Las unidades totales.
 - El total estimado.
 - El resumen de confirmación y el comprobante.
 
-## Archivos JavaScript
-
-- `algoritmica.js`: resolución de la Parte A.
-- `comprar.js`: cálculo dinámico de la Parte B.
-
-Para probarlo, abrí `algoritmica.html` y `comprar.html` en el navegador.
+La Parte A no forma parte de la navegación de Nova Tech. Ambas se mantienen separadas, tal como indica la consigna.
